@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p>ENTER A NUMBER AND CLICK OK:</p>
+    <input id="id1" type="number" min="18" max="100" required>
+    <button onclick="myFunction()">OK</button>
+    <p>If the number is less than 18 or greater than 100 an error message should be displayed</p>
+    <p id="result"></p>
+    <script>
+        function myFunction() {
+            var inpObj = document.getElementById("id1");
+            if (!inpObj.checkValidity()) {
+                document.getElementById("result").innerHTML = inpObj.validationMessage;
+            }
+            else {
+                document.getElementById("result").innerHTML = "You are legally allowed to vote";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
